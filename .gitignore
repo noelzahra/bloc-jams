@@ -1,3 +1,9 @@
+<<<<<<< HEAD
+*~
+.DS_Store
+.vagrant
+=======
 node_modules
 bower_components
 *.swp
+>>>>>>> 53fbcf1615a5be4053fdc4aa44a249c25c6deab8
