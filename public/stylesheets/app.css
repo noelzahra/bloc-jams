@@ -8,6 +8,9 @@ body {
 	min-height: 100%;
 	line-height: 1.4em;
 	background: -webkit-linear-gradient(top, rgb(25, 100, 176) 60%, rgb(72, 236, 230) 100%);
+	background: -moz-linear-gradient(top, rgb(25, 100, 176) 60%, rgb(72, 236, 230) 100%);
+	background: -o-linear-gradient(top, rgb(25, 100, 176) 60%, rgb(72, 236, 230) 100%);
+	background: linear-gradient(top, rgb(25, 100, 176) 60%, rgb(72, 236, 230) 100%);
 }
 
 body.landing {
@@ -53,9 +56,13 @@ body.landing {
 }
 
 .album-container {
-	padding: 30px 30px 30px 0;
+	padding: 50px 92px 50px 0;
 	float: left;
 	display: inline-block;
+}
+
+.album-container:nth-child(3n+3) {
+	padding: 50px 0;
 }
 
 /* Selling points Styles */
@@ -63,13 +70,24 @@ body.landing {
 	width: 100%;
 	padding: 80px 0;
 	background: #4192D9;
+	text-align: center;
 }
 
 #selling-points .point {
-	width: 32%;
-	float: left;
-	padding: 0 0.5%;
+	width: 30%;
+	margin: 0 auto;
+	display: inline-block;
 	text-align: center;
+}
+
+#selling-points .point:first-child {
+	float: left;
+	padding: 0;
+}
+
+#selling-points .point:nth-child(3) {
+	float: right;
+	padding: 0;
 }
 
 #selling-points .point img {
@@ -111,9 +129,9 @@ body.landing {
 }
 
 #footer section {
-	width: 37%;
+	width: 38%;
 	float: left;
-	padding-right: 20px;
+	padding-right: 35px;
 }
 
 #footer section ul li a {
@@ -127,8 +145,9 @@ body.landing {
 }
 
 #footer section.social_links {
-	width: 20%;
-	float: left;
+	width: 17%;
+	float: right;
+	padding-right: 0;
 }
 
 #footer .social_links ul {
@@ -137,7 +156,11 @@ body.landing {
 
 #footer .social_links ul li {
 	float: left;
-	padding-right: 10px;
+	padding-right: 7px;
+}
+
+#footer .social_links ul li a:hover {
+	border: none;
 }
 
 #footer .social_links ul li:last-child {
