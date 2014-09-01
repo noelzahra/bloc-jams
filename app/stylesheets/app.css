@@ -7,115 +7,150 @@ body {
 	color: #F3FFE2;
 	min-height: 100%;
 	line-height: 1.4em;
-	background: -webkit-linear-gradient(top, rgb(25, 100, 176) 60%, rgb(72, 236, 230) 100%);
-	background: -moz-linear-gradient(top, rgb(25, 100, 176) 60%, rgb(72, 236, 230) 100%);
-	background: -o-linear-gradient(top, rgb(25, 100, 176) 60%, rgb(72, 236, 230) 100%);
-	background: linear-gradient(top, rgb(25, 100, 176) 60%, rgb(72, 236, 230) 100%);
+	background: -webkit-linear-gradient(top, rgb(25, 100, 176) 50%, rgb(72, 236, 230) 100%);
+	background: -moz-linear-gradient(top, rgb(25, 100, 176) 50%, rgb(72, 236, 230) 100%);
+	background: -o-linear-gradient(top, rgb(25, 100, 176) 50%, rgb(72, 236, 230) 100%);
+	background: linear-gradient(top, rgb(25, 100, 176) 50%, rgb(72, 236, 230) 100%);
 }
 
 body.landing {
-	background: #5B5579;
+	margin-bottom: 0;
+	background: #4192D9;
+}
+
+.navbar {
+	margin-bottom: 0;
+}
+
+.player-header-nav{
+	width: 100%;
+	background: rgba(0, 48, 90, .9);
+	height: 90px;
+	padding: 5px 0;
 }
 
 .clear {
 	clear: both;
 }
 
-#nav-bar {
-	width: 100%;
-	background: #00305A;
-	height: 90px;
-	padding: 5px 0;
-}
-
 
 /* Hero Styles */
-#hero-content {
+
+.hero-content {
 	width: 100%;
 	background: url(../images/band_hero.jpg) no-repeat 50% 10%;
 	background-size: cover;
-	padding: 100px 0;
+	padding: 80px 0;
+	height: 300px;
 }
 
-#hero-content h1 {
+.hero-content h1 {
 	font-family: 'Roboto Slab', Helvetica, sans-serif;
 	font-size: 4.8em;
-	margin-bottom: 40px;
-	font-weight: 300;
+	font-weight: 700;
 	color: #EB7F00;
+	margin-bottom: -12px;
 }
 
-#hero-content h3 {
+.hero-content h3 {
 	font-size: 1.2em;
 	width: 320px;
+	line-height: 1.5em;
 }
 
-.container {
+/*.container {
 	width: 1024px;
 	margin: 0 auto;
+}*/
+
+/* Album view styles*/
+
+.album-header-container {
+	margin-top: 55px;
+	margin-bottom: 40px;
 }
 
-.album-container {
-	padding: 50px 92px 50px 0;
-	float: left;
-	display: inline-block;
+.album-header-information {
+	margin-top: 45px;
+	margin-bottom: 20px;
 }
 
-.album-container:nth-child(3n+3) {
-	padding: 50px 0;
+.album-header-information h3, h4, h5 {
+	font-family: 'Roboto Sans', Helvetica, sans-serif;
+	line-height: 1.4em;
 }
+
+.album-header-information h3 {
+	font-size: 4em;
+	font-weight: 300;
+}
+
+.album-header-information h4 {
+	font-size: 2em;
+	font-weight: 300;
+}
+
+.album-header-infortmation h5 {
+	font-size: 1.8em;
+	font-weight: 300;
+}
+
+.table.album-song-listing {
+	font-weight: 300;
+}
+
+.table.album-song-listing td {
+	padding: 20px;
+	border-top: 1px solid rgba(255, 255, 255, .4);
+}
+
 
 /* Selling points Styles */
-#selling-points {
-	width: 100%;
+
+.selling-points {
 	padding: 80px 0;
 	background: #4192D9;
-	text-align: center;
 }
 
-#selling-points .point {
-	width: 30%;
-	margin: 0 auto;
-	display: inline-block;
-	text-align: center;
-}
-
-#selling-points .point:first-child {
+.selling-points .point {
+	width: 32%;
 	float: left;
-	padding: 0;
+	padding: 0 0.5%;
+	text-align: center;
 }
 
-#selling-points .point:nth-child(3) {
-	float: right;
-	padding: 0;
+.selling-points .point img {
+	padding-bottom: 20px;
 }
 
-#selling-points .point img {
-	padding-bottom: 30px;
-}
-
-#selling-points .point h5 {
-	font-size: 1.4em;
+.selling-points .point h5 {
+	font-size: 1.6em;
 	font-weight: bold;
 	color: #EB7F00;
 	margin-bottom: 10px;
 	text-align: center;
 }
 
-#selling-points .point p {
+.selling-points .point p {
 	font-size: 1em;
 }
 
 
  /*Footer*/
-#footer {
+
+footer {
 	width: 100%;
-	height: 160px;
+	height: 230px;
 	background: #00305A;
-	padding: 80px 0;
+	padding: 20px 0;
 }
 
-#footer h3 {
+footer section {
+	float: left;
+	padding-right: 40px;
+}
+
+footer h3 {
 	font-family: 'Roboto Slab', Helvetica, sans-serif;
 	font-size: 1.4em;
 	font-weight: 600;
@@ -123,46 +158,31 @@ body.landing {
 	margin-bottom: 10px;
 }
 
-#footer p {
+footer p {
 	font-size: 0.8em;
 	font-weight: 300;
 }
 
-#footer section {
-	width: 38%;
-	float: left;
-	padding-right: 35px;
-}
-
-#footer section ul li a {
+footer section ul li a {
 	font-size: 0.8em;
 	text-decoration: none;
 	color: #EB7F00;
 }
 
-#footer section ul li a:hover {
+footer section ul li a:hover {
+	color: #EB7F00;
 	border-bottom: 1px solid #EB7F00;
 }
 
-#footer section.social_links {
-	width: 17%;
-	float: right;
-	padding-right: 0;
-}
-
-#footer .social_links ul {
+footer .social_links ul {
 	list-style: none;
 }
 
-#footer .social_links ul li {
+footer .social_links ul li {
 	float: left;
-	padding-right: 7px;
+	padding: 0 10px 10px 0;
 }
 
-#footer .social_links ul li a:hover {
+footer .social_links ul li a:hover {
 	border: none;
-}
-
-#footer .social_links ul li:last-child {
-	padding-right: 0;
 }

@@ -9,27 +9,29 @@
 
 <!-- Stylesheets -->
 	<link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.17.1/build/cssreset/cssreset-min.css">
+	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="/stylesheets/app.css">
 </head>
 
-<body>
+<body class="player">
 
 <!-- Nav bar -->
-	<div id="nav-bar">
-		<div class="container">
-			<a href="index.html"><img src="images/blocjams.png"></a>
+<nav class="player-header-nav navbar">
+	<div class="container">
+		<div class="navbar-header">
+			<a class="logo navbar-left" href="index.html"><img src="/images/blocjams.png"></a>
 		</div>
 	</div>
+</nav>
 
-<div class="container">
+<div class="album-container container">
 <!--  Album container -->
-	<div class="album-container">
-		<div class="album-header-container">
-			<div>
+		<div class="album-header-container row">
+			<div class="col-md-3">
 				<img src="/images/album-placeholder.png">
 			</div>
 
-			<div class="album-inforamtion">
+			<div class="album-header-information col-md-8 col-md-push-1">
 				<h3>The Colors</h3>
 				<h4>Pablo Picasso</h4>
 				<h5>1881 on Cubism</h5>
@@ -37,352 +39,59 @@
 		</div>
 
 <!-- Song table -->
-		<div>
-			<table class="album-song-listing">
+		<div class="row">
+			<table class="album-song-listing table">
 				<tr>
-					<td>1</td>
-					<td>Blue</td>
-					<td>X:XX</td>
-					<td>Added to Playlist</td>
+					<td class="col-md-1">1</td>
+					<td class="col-md-5">Blue</td>
+					<td class="col-md-2">X:XX</td>
+					<td class="col-md-4">Added to Playlist</td>
 				</tr>
 
 				<tr>
-					<td>2</td>
-					<td>Green</td>
-					<td>X:XX</td>
-					<td>Not in Playlist</td>
+					<td class="col-md-1">2</td>
+					<td class="col-md-5">Green</td>
+					<td class="col-md-2">X:XX</td>
+					<td class="col-md-4">Not in Playlist</td>
 				</tr>
 
 				<tr>
-					<td>3</td>
-					<td>Red</td>
-					<td>X:XX</td>
-					<td>Added to Playlist</td>
+					<td class="col-md-1">3</td>
+					<td class="col-md-5">Red</td>
+					<td class="col-md-2">X:XX</td>
+					<td class="col-md-4">Added to Playlist</td>
 				</tr>
 
 				<tr>
-					<td>4</td>
-					<td>Pink</td>
-					<td>X:XX</td>
-					<td>Added to Playlist</td>
+					<td class="col-md-1">4</td>
+					<td class="col-md-5">Pink</td>
+					<td class="col-md-2">X:XX</td>
+					<td class="col-md-4">Added to Playlist</td>
 				</tr>
 
 				<tr>
-					<td>5</td>
-					<td>Magenta</td>
-					<td>X:XX</td>
-					<td>Not in Playlist</td>
-				</tr>
-
-			</table>
-		</div>
-
-	</div>
-<!-- END: Album container -->
-
-<!--  Album container -->
-	<div class="album-container">
-		<div class="album-header-container">
-			<div>
-				<img src="/images/album-placeholder.png">
-			</div>
-
-			<div class="album-inforamtion">
-				<h3>The Colors</h3>
-				<h4>Pablo Picasso</h4>
-				<h5>1881 on Cubism</h5>
-			</div>
-		</div>
-
-<!-- Song table -->
-		<div>
-			<table class="album-song-listing">
-				<tr>
-					<td>1</td>
-					<td>Blue</td>
-					<td>X:XX</td>
-					<td>Added to Playlist</td>
-				</tr>
-
-				<tr>
-					<td>2</td>
-					<td>Green</td>
-					<td>X:XX</td>
-					<td>Not in Playlist</td>
-				</tr>
-
-				<tr>
-					<td>3</td>
-					<td>Red</td>
-					<td>X:XX</td>
-					<td>Added to Playlist</td>
-				</tr>
-
-				<tr>
-					<td>4</td>
-					<td>Pink</td>
-					<td>X:XX</td>
-					<td>Added to Playlist</td>
-				</tr>
-
-				<tr>
-					<td>5</td>
-					<td>Magenta</td>
-					<td>X:XX</td>
-					<td>Not in Playlist</td>
+					<td class="col-md-1">5</td>
+					<td class="col-md-5">Magenta</td>
+					<td class="col-md-2">X:XX</td>
+					<td class="col-md-4">Not in Playlist</td>
 				</tr>
 
 			</table>
 		</div>
-
-	</div>
-<!-- END: Album container -->
-
-<!--  Album container -->
-	<div class="album-container">
-		<div class="album-header-container">
-			<div>
-				<img src="/images/album-placeholder.png">
-			</div>
-
-			<div class="album-inforamtion">
-				<h3>The Colors</h3>
-				<h4>Pablo Picasso</h4>
-				<h5>1881 on Cubism</h5>
-			</div>
-		</div>
-
-<!-- Song table -->
-		<div>
-			<table class="album-song-listing">
-				<tr>
-					<td>1</td>
-					<td>Blue</td>
-					<td>X:XX</td>
-					<td>Added to Playlist</td>
-				</tr>
-
-				<tr>
-					<td>2</td>
-					<td>Green</td>
-					<td>X:XX</td>
-					<td>Not in Playlist</td>
-				</tr>
-
-				<tr>
-					<td>3</td>
-					<td>Red</td>
-					<td>X:XX</td>
-					<td>Added to Playlist</td>
-				</tr>
-
-				<tr>
-					<td>4</td>
-					<td>Pink</td>
-					<td>X:XX</td>
-					<td>Added to Playlist</td>
-				</tr>
-
-				<tr>
-					<td>5</td>
-					<td>Magenta</td>
-					<td>X:XX</td>
-					<td>Not in Playlist</td>
-				</tr>
-
-			</table>
-		</div>
-
-	</div>
-<!-- END: Album container -->
-
-<!--  Album container -->
-	<div class="album-container">
-		<div class="album-header-container">
-			<div>
-				<img src="/images/album-placeholder.png">
-			</div>
-
-			<div class="album-inforamtion">
-				<h3>The Colors</h3>
-				<h4>Pablo Picasso</h4>
-				<h5>1881 on Cubism</h5>
-			</div>
-		</div>
-
-<!-- Song table -->
-		<div>
-			<table class="album-song-listing">
-				<tr>
-					<td>1</td>
-					<td>Blue</td>
-					<td>X:XX</td>
-					<td>Added to Playlist</td>
-				</tr>
-
-				<tr>
-					<td>2</td>
-					<td>Green</td>
-					<td>X:XX</td>
-					<td>Not in Playlist</td>
-				</tr>
-
-				<tr>
-					<td>3</td>
-					<td>Red</td>
-					<td>X:XX</td>
-					<td>Added to Playlist</td>
-				</tr>
-
-				<tr>
-					<td>4</td>
-					<td>Pink</td>
-					<td>X:XX</td>
-					<td>Added to Playlist</td>
-				</tr>
-
-				<tr>
-					<td>5</td>
-					<td>Magenta</td>
-					<td>X:XX</td>
-					<td>Not in Playlist</td>
-				</tr>
-
-			</table>
-		</div>
-
-	</div>
-<!-- END: Album container -->
-
-<!--  Album container -->
-	<div class="album-container">
-		<div class="album-header-container">
-			<div>
-				<img src="/images/album-placeholder.png">
-			</div>
-
-			<div class="album-inforamtion">
-				<h3>The Colors</h3>
-				<h4>Pablo Picasso</h4>
-				<h5>1881 on Cubism</h5>
-			</div>
-		</div>
-
-<!-- Song table -->
-		<div>
-			<table class="album-song-listing">
-				<tr>
-					<td>1</td>
-					<td>Blue</td>
-					<td>X:XX</td>
-					<td>Added to Playlist</td>
-				</tr>
-
-				<tr>
-					<td>2</td>
-					<td>Green</td>
-					<td>X:XX</td>
-					<td>Not in Playlist</td>
-				</tr>
-
-				<tr>
-					<td>3</td>
-					<td>Red</td>
-					<td>X:XX</td>
-					<td>Added to Playlist</td>
-				</tr>
-
-				<tr>
-					<td>4</td>
-					<td>Pink</td>
-					<td>X:XX</td>
-					<td>Added to Playlist</td>
-				</tr>
-
-				<tr>
-					<td>5</td>
-					<td>Magenta</td>
-					<td>X:XX</td>
-					<td>Not in Playlist</td>
-				</tr>
-
-			</table>
-		</div>
-
-	</div>
-<!-- END: Album container -->
-
-<!--  Album container -->
-	<div class="album-container">
-		<div class="album-header-container">
-			<div>
-				<img src="/images/album-placeholder.png">
-			</div>
-
-			<div class="album-inforamtion">
-				<h3>The Colors</h3>
-				<h4>Pablo Picasso</h4>
-				<h5>1881 on Cubism</h5>
-			</div>
-		</div>
-
-<!-- Song table -->
-		<div>
-			<table class="album-song-listing">
-				<tr>
-					<td>1</td>
-					<td>Blue</td>
-					<td>X:XX</td>
-					<td>Added to Playlist</td>
-				</tr>
-
-				<tr>
-					<td>2</td>
-					<td>Green</td>
-					<td>X:XX</td>
-					<td>Not in Playlist</td>
-				</tr>
-
-				<tr>
-					<td>3</td>
-					<td>Red</td>
-					<td>X:XX</td>
-					<td>Added to Playlist</td>
-				</tr>
-
-				<tr>
-					<td>4</td>
-					<td>Pink</td>
-					<td>X:XX</td>
-					<td>Added to Playlist</td>
-				</tr>
-
-				<tr>
-					<td>5</td>
-					<td>Magenta</td>
-					<td>X:XX</td>
-					<td>Not in Playlist</td>
-				</tr>
-
-			</table>
-		</div>
-
-	</div>
 <!-- END: Album container -->
 
 </div>
-<div class="clear"></div>
 
 <!-- Footer -->
-		<div id="footer">
-			<div class="container">
-        <section>
+	<footer class="navbar navbar-fixed-bottom">
+		<div class="container">
+			<section class="col-md-6">
           <h3>About us</h3>
           <p>Bloc Jams are an English indie rock band formed in 2012 in Croydon, a suburb of London. Some of the band's well-known albums are: Whatever People Say I Am, That's What I'm Not and Favourite Worst Nightmare.</p>
-          <p id="copyright">©2014 Copyright Bloc Jams</p>
+          <p>©2014 Copyright Bloc Jams</p>
         </section>
 
-        <section>
+        <section class="col-md-4">
           <h3>This month's gigs</h3>
           <p>See us performing live in one of our upcoming gigs. Some venues requires you to book the event</p>
           <ul>
@@ -392,16 +101,16 @@
           </ul>
         </section>
 
-        <section class="social_links">
+        <section class="social_links col-md-2">
           <h3>Follow us</h3>
           <ul>
             <li><a href="http://www.facebook.com" target="_blank" ><img src="images/facebook.png" alt="facebook"></a></li>
             <li><a href="http://www.twitter.com" target="_blank" ><img src="images/twitter.png" alt="twitter"></a></li>
-            <li><a href="https://www.apple.com/itunes/charts/songs/" target="_blank" ><img src="images/itunes-logo.png" alt="itunes"></a></li>
+            <li><a class="navbar-button btn-info btn pull-right" href="https://www.apple.com/itunes/charts/songs/" target="_blank" >Download from itunes</a></li>
           </ul>
         </section>
 		</div>
-  </div>
+	</footer>
 <!-- END: footer -->
 </body>
 </html>
