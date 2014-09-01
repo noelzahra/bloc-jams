@@ -4,9 +4,10 @@ html {
 
 body {
 	font-family: 'Open Sans', Helvetica, sans-serif;
-	color: #fff;
+	color: #F3FFE2;
 	min-height: 100%;
 	line-height: 1.4em;
+	background: -webkit-linear-gradient(top, rgb(25, 100, 176) 60%, rgb(72, 236, 230) 100%);
 }
 
 body.landing {
@@ -19,7 +20,7 @@ body.landing {
 
 #nav-bar {
 	width: 100%;
-	background: #2c1231;
+	background: #00305A;
 	height: 90px;
 	padding: 5px 0;
 }
@@ -38,6 +39,7 @@ body.landing {
 	font-size: 4.8em;
 	margin-bottom: 40px;
 	font-weight: 300;
+	color: #EB7F00;
 }
 
 #hero-content h3 {
@@ -50,10 +52,17 @@ body.landing {
 	margin: 0 auto;
 }
 
+.album-container {
+	padding: 30px 30px 30px 0;
+	float: left;
+	display: inline-block;
+}
+
 /* Selling points Styles */
 #selling-points {
 	width: 100%;
 	padding: 80px 0;
+	background: #4192D9;
 }
 
 #selling-points .point {
@@ -70,7 +79,7 @@ body.landing {
 #selling-points .point h5 {
 	font-size: 1.4em;
 	font-weight: bold;
-	color: #E0215f;
+	color: #EB7F00;
 	margin-bottom: 10px;
 	text-align: center;
 }
@@ -84,7 +93,7 @@ body.landing {
 #footer {
 	width: 100%;
 	height: 160px;
-	background: #122A3E;
+	background: #00305A;
 	padding: 80px 0;
 }
 
@@ -92,7 +101,7 @@ body.landing {
 	font-family: 'Roboto Slab', Helvetica, sans-serif;
 	font-size: 1.4em;
 	font-weight: 600;
-	color: #E0215f;
+	color: #EB7F00;
 	margin-bottom: 10px;
 }
 
@@ -110,11 +119,11 @@ body.landing {
 #footer section ul li a {
 	font-size: 0.8em;
 	text-decoration: none;
-	color: #E0215f;
+	color: #EB7F00;
 }
 
 #footer section ul li a:hover {
-	border-bottom: 1px solid #E0215f;
+	border-bottom: 1px solid #EB7F00;
 }
 
 #footer section.social_links {
