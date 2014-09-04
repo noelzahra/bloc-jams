@@ -11,6 +11,13 @@
 	<link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.17.1/build/cssreset/cssreset-min.css">
 	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="/stylesheets/app.css">
+
+<!--  Javascript -->
+	<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+	<script type="text/javascript" src="/javascripts/app.js"></script>
+	<script>
+		require('scripts/app');
+	</script>
 </head>
 
 <body class="player">
@@ -19,7 +26,14 @@
 <nav class="player-header-nav navbar">
 	<div class="container">
 		<div class="navbar-header">
-			<a class="logo navbar-left" href="index.html"><img src="/images/blocjams.png"></a>
+			<a class="logo navbar-left" href="/index.html"><img src="/images/blocjams.png"></a>
+		</div>
+		<div class="nav-links">
+			<ul>
+				<li><a href="/index.html">Home</a></li>
+				<li><a href="/albums.html">Album</a></li>
+				<li><a href="/collection.html">Collection</a></li>
+			</ul>
 		</div>
 	</div>
 </nav>
