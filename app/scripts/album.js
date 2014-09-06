@@ -16,6 +16,7 @@ var albumPicasso = {
 	]
 };
 
+
 /* Creating albumMarconi object*/
 var albumMarconi = {
 	name : 'Marconi',
@@ -41,10 +42,10 @@ var createSongRow = function(songNumber, songName, songLength) {
 		+	'	<td class="col-md-9">' + songName + '</td>'
 		+	'	<td class="col-md-2">' + songLength + '</td>'
 		+ '</tr>';
-		return $(template);
+		return $(template); // fills <table class="album-song-listing table"></table>
 };
 
-var createAlbumMarconi = function() {
+/*var createAlbumMarconi = function() {
 	var album = albumMarconi;
 
 		//Update album title
@@ -72,9 +73,9 @@ var createAlbumMarconi = function() {
 			var $newRow = createSongRow(i + 1, songData.name, songData.length);
 			$songList.append($newRow);
 		}
-};
+};*/
 
-var createAlbumPicasso = function() {
+/*var createAlbumPicasso = function() {
 	var album = albumPicasso;
 
 		//Update album with Picasso properties
@@ -98,8 +99,31 @@ var createAlbumPicasso = function() {
 			var $newRow = createSongRow(i + 1, songData.name, songData.length );
 			$songList.append($newRow); //populate $songList with $newRow
 		}
-};
+};*/
 
+var changeAlbumView = function(album) {
+	var $albumTitle = $('.album-title');
+	$albumTitle.text(album.name);
+
+	var $albumArtist = $('.album-artist');
+	$albumArtist.text(album.artist);
+
+	var $albumMeta = $('.album-meta-info');
+	$albumMeta.text(album.year + " on " + album.label);
+
+	var $albumImage = $('.album-image img');
+	$albumImage.attr('src', album.albumArtUrl);
+
+	var $songList = $('.album-song-listing');
+	$songList.empty();
+	var songs = album.songs;
+	for (var i = 0; i < songs.length; i++) {
+		var songData = songs[i];
+		var $newRow = createSongRow(i + 1, songData.name, songData.length);
+		$songList.append($newRow);
+	}
+
+};
 
  // This 'if' condition is used to prevent the jQuery modifications
  // from happening on non-Album view pages.
@@ -107,7 +131,9 @@ var createAlbumPicasso = function() {
 
  if (document.URL.match(/\/album.html/)) {
  	$(document).ready(function() {
- 		createAlbumMarconi();
- 		$('.album-header-container .row').click(createAlbumPicasso());
+ 		changeAlbumView(albumMarconi);
+ 		$('.album-container').click(function() {
+ 			changeAlbumView(albumPicasso);
+ 		});
  	});
  }
