@@ -34,72 +34,62 @@ var albumMarconi = {
 };
 
 /* Track score function returns a complete JQuery object */
+var currentPlayingSong = null;
 
 var createSongRow = function(songNumber, songName, songLength) {
 	var template =
 			'<tr>'
-		+	'	<td class="col-md-1">' + songNumber + '</td>'
+		+	'	<td class="song-number col-md-1" data-song-number="' + songNumber + '">' + songNumber + '</td>'
 		+	'	<td class="col-md-9">' + songName + '</td>'
 		+	'	<td class="col-md-2">' + songLength + '</td>'
-		+ '</tr>';
-		return $(template); // fills <table class="album-song-listing table"></table>
+		+ '</tr>'
+		;
+
+		var $row = $(template);
+
+		// Change from a song number to play button when the song isn't playing and we hover over the row.
+		var onHover = function(event) {
+			songNumberCell = $(this).find('.song-number');
+			songNumber = songNumberCell.data('song-number');
+			if (songNumber !== currentPlayingSong) {
+				songNumberCell.html('<a class="album-song-button"><i class="fa fa-play"></i></a>');
+			}
+		};
+
+		// Change from a play button to song number when the song isn't playing and we hover off the row.
+		var offHover = function(event) {
+			songNumberCell = $(this).find('.song-number');
+			songNumber = songNumberCell.data('song-number');
+			if (songNumberCell !== currentPlayingSong) {
+					songNumberCell.html(songNumber);
+			}
+		};
+
+		$row.find('.song-number').click(clickHandler);
+		$row.hover(onHover, offHover);
+		return $row;
 };
 
-/*var createAlbumMarconi = function() {
-	var album = albumMarconi;
+/* Create clickhandler to show play, pause or song number*/
+var clickHandler = function(event) {
+	songNumber = $(this).data('song-number');
 
-		//Update album title
-		var $albumTitle = $('.album-title');
-		$albumTitle.text(album.name); //passing 'Marconi' to albumTitle
+	if (currentPlayingSong !== null) {
+		 // Revert to song number for currently playing song because user started playing new song.
+			currentPlayingCell = $('.song-number[data-song-number="' + currentPlayingSong + ' "]');
+			currentPlayingCell.html(currentPlayingSong);
+	}
+	if (currentPlayingSong !== songNumber) {
+		// Switch from Play -> Pause button to indicate new song is playing.
+		$(this).html('<a class="album-song-button"><i class="fa fa-pause"></i></a>');
+		currentPlayingSong = songNumber;
+	} else if (currentPlayingSong === songNumber) {
+		// Switch from Pause -> Play button to pause currently playing song.
+		$(this).html('<a class="album-song-button"><i class="fa fa-play"></i></a>');
+		currentPlayingSong = null;
+	}
+};
 
-		//Upate album artist
-		var $albumArtist = $('.album-artist');
-		$albumArtist.text(album.artist);
-
-		// Update the meta info
-		var $albumMeta = $('.album-meta-info');
-		$albumMeta.text(album.year + " on "  + album.label);
-
-		//Update album image
-		var $albumImage = $('.album-image img');
-		$albumImage.attr('src', album.albumArtUrl);
-
-		// Update the song list
-		var $songList = $('.album-song-listing');
-		$songList.empty();
-		var songs = album.songs;
-		for (var i = 0; i < songs.length; i++) {
-			var songData = songs[i];
-			var $newRow = createSongRow(i + 1, songData.name, songData.length);
-			$songList.append($newRow);
-		}
-};*/
-
-/*var createAlbumPicasso = function() {
-	var album = albumPicasso;
-
-		//Update album with Picasso properties
-		var $albumTitle = $('.album-title');
-		$albumTitle.text(album.name);
-
-		var $albumArtist = $('.album-artist');
-		$albumArtist.text(album.artist);
-
-		var $albumMeta = $('.album-meta-info');
-		albumMeat.text(album.year + " on " + album.label);
-
-		var $albumArtUrl = $('.album-image img');
-		albumArtUrl.attr('src', album.albumArtUrl);
-
-		var $songList = $('.album-song-listing');
-		$songList.empty();
-		var songs = album.songs;
-		for (var i = 0; i < songs.length; i++) {
-			var songData = songs[i];
-			var $newRow = createSongRow(i + 1, songData.name, songData.length );
-			$songList.append($newRow); //populate $songList with $newRow
-		}
-};*/
 
 /* Function with album object as parameter */
 var changeAlbumView = function(album) {
@@ -132,7 +122,7 @@ var changeAlbumView = function(album) {
  if (document.URL.match(/\/album.html/)) {
  	$(document).ready(function() {
  		changeAlbumView(albumMarconi);
- 		$('.album-container').click(function() {
+ 		$('.album-header-container').click(function() {
  			changeAlbumView(albumPicasso);
  		});
  	});

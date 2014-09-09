@@ -1,102 +1,175 @@
+<!-- DjFunk -->
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset = "utf-8">
-    <title>Bloc Jams</title>
+<head>
+  <meta charset='utf-8'>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+  <title>djfunk</title>
+<!--  Google fonts -->
+  <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,800,600,700,300" rel="stylesheet" type="text/css">
+  <link href='http://fonts.googleapis.com/css?family=Roboto+Slab:400,700' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Anton' rel='stylesheet' type='text/css'>
 
-    <!-- Google font -->
-    <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,800,600,700,300" rel="stylesheet" type="text/css">
-    <link href='http://fonts.googleapis.com/css?family=Roboto+Slab:400,700' rel='stylesheet' type='text/css'>
-    <!-- Stylesheets -->
-    <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.17.1/build/cssreset/cssreset-min.css">
-    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="/stylesheets/app.css">
-    <!-- Javascript -->
-    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-    <script type="text/javascript" src="/javascripts/app.js"></script>
-    <script>
-    	require('scripts/app');
-    </script>
-  </head>
+<!--  CSS Stylesheets -->
+  <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.17.1/build/cssreset/cssreset-min.css">
+  <link rel="stylesheet" type="text/css" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="/stylesheets/app.css">
+<!-- Javascript -->
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <script src="/javascripts/app.js"></script>
+  <script>
+    require('scripts/app');
+  </script>
+</head>
 
-  <body class="landing">
-
-<!-- Nav bar -->
-    <nav class="player-header-nav navbar">
-      <div class="container">
+<body class="landing">
+<!-- Navbar -->
+  <nav class="player-header-nav navbar">
+    <div class="container">
         <div class="navbar-header">
-          <a class="logo navbar-left" href="index.html"><img src="/images/blocjams.png"></a>
+          <a class="logo navbar-left" href="index.html"><img src="images/djfunk_logo.png"></a>
         </div>
-        <div class="nav-links">
+        <div class="navbar-left nav-links">
           <ul>
-          <li><a href="/index.html">Home</a></li>
-          <li><a href="/album.html">Album</a></li>
-          <li><a href="/collection.html">Collection</a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="album.html">Album</a></li>
+            <li><a href="collection.html">Collection</a></li>
           </ul>
         </div>
       </div>
-    </nav>
+  </nav>
 
 <!-- Hero content -->
-    <div class="hero-content">
-      <div class="container">
-        <h1>Bloc Jams</h1>
-        <h3>Will be performing live at the Glastonbury Festival this summer. See you all there!</h3>
+  <div class="hero-content">
+    <div class="container">
+      <h1><span>The Wonderful</span><br />
+          Rocking<br/>
+          Summer<br />
+          of 2014
+      </h1>
+    </div>
+  </div>
+
+<!-- Standfirst -->
+  <div class="standfirst-content">
+    <div class="container">
+        <h2>Rock concerts in Milan</h2>
+        <p>This summer Italian rock fans were treated to a stunning performance by DjFunk. Milan concert made a lasting impression on the audience making it a concert to remember for months to come. This, along with a completely sold out show, caused quite a stir- the crowd was excitable and energized, all ready to rock for the night! This is an ambitious musical project that is sure to make a comeback on summer 2015.</p>
+    </div>
+  </div>
+
+<!-- Features -->
+<div class="features-container">
+  <div class="container">
+
+    <div class="feature col-md-4">
+      <div class="feature-box">
+        <img src="images/celebs.jpg">
+      </div>
+      <h3>Celebrities</h3>
+      <p>If you've attended this summer concerts you might have spotted any of these celebrities: Elizabetta Canalis, Luigi Buffon, and Claudio Marchisio</p>
+    </div>
+
+    <div class="feature col-md-4">
+      <div class="feature-box">
+        <img src="images/itunes.jpg">
+      </div>
+      <h3>Music on itunes</h3>
+      <p>Our music on iTunes keeps hitting the top charts with our latest album ranking third. Following this summer's concerts album downloads from iTunes increased considerably.</p>
+    </div>
+
+    <div class="feature col-md-4">
+      <div class="feature-box">
+        <img src="images/european_tour.jpg">
+      </div>
+      <h3>European tour</h3>
+      <p>It's been encouraging seeing that our music is well-received beyond our Italian shores. Our plans for an European tour with a team of other djs is at a very advanced stage.</p>
+    </div>
+  </div>
+</div>
+
+<!-- Benefits -->
+<div class="benefits-container">
+  <div class="container">
+  <div class="row">
+
+<!-- Row container to the left -->
+    <div class="row col-md-5 col-md-push-1 benefit-hero">
+      <img src="images/iphone.png">
+    </div>
+
+<!-- Row container to the right -->
+    <div class="row">
+
+      <div class="benefit-header col-md-7">
+        <h2>Get our music streamed wherever you are to any device connected online</h2>
+      </div>
+
+      <div class="benefit col-md-7">
+        <div class="col-md-2">
+          <img src="images/music_icon.png">
+        </div>
+        <div class="col-md-8 col-md-push-1">
+          <h3>Choose your music</h3>
+          <p>The artists you love, the latest hits, and new discoveries just for you. Hit play to stream anything you like.</p>
+        </div>
+      </div>
+
+      <div class="benefit col-md-7">
+        <div class="col-md-2">
+          <img src="images/free_music_icon.png">
+        </div>
+        <div class="col-md-8 col-md-push-1">
+          <h3>Free playlists</h3>
+          <p>Browse amazing playlists for every mood and genre. Perfect if you don't know what to listen to, or if you're in the mood for something new.</p>
+        </div>
+      </div>
+
+      <div class="benefit col-md-7">
+        <div class="col-md-2">
+          <img src="images/responsive_icon.png">
+        </div>
+        <div class="col-md-8 col-md-push-1">
+          <h3>Mobile enabled</h3>
+          <p>Listen to your music on the go. Available free on mobile, tablet and computer. Listen to the right music, wherever you are.</p>
+        </div>
       </div>
     </div>
-
-<!-- Selling points -->
-    <div class="selling-points container">
-      <div class="row">
-        <div class="point col-md-4">
-            <img src="images/music_icon.png">
-            <h5>Choose your music</h5>
-            <p>The artists you love, the latest hits, and new discoveries just for you. Hit play to stream anything you like.</p>
-          </div>
-          <div class="point col-md-4">
-            <img src="images/free_music_icon.png">
-            <h5>Free playlists</h5>
-            <p>Browse amazing playlists for every mood and genre. Perfect if you don't know what to listen to, or if you're in the mood for something new.</p>
-          </div>
-          <div class="point col-md-4">
-            <img src="images/responsive_icon.png">
-            <h5>Mobile enabled</h5>
-            <p>Listen to your music on the go.  Available free on mobile, tablet and computer. Listen to the right music, wherever you are.</p>
-          </div>
-          <div class="clear"></div>
-        </div>
     </div>
+  </div>
+</div>
 
 <!-- Footer -->
-  <footer class="navbar navbar-fixed-bottom">
+  <footer class="navbar">
     <div class="container">
       <section class="col-md-6">
-          <h3>About us</h3>
-          <p>Bloc Jams are an English indie rock band formed in 2012 in Croydon, a suburb of London. Some of the band's well-known albums are: Whatever People Say I Am, That's What I'm Not and Favourite Worst Nightmare.</p>
-          <p>©2014 Copyright Bloc Jams</p>
-        </section>
+        <h3>About our concerts</h3>
+        <p>We're synonymous with rock music concerts in Northern Italy and Switzerland. Our summer rock concerts have become landmark events on the national music scene. Some of the band's well-known albums are: Whatever People Say I Am, That's What I'm Not and Favourite Worst Nightmare.</p>
+        <p class="copyright">&copy; 2014 | DjFunk</p>
+      </section>
 
-        <section class="col-md-4">
-          <h3>This month's gigs</h3>
-          <p>See us performing live in one of our upcoming gigs. Some venues requires you to book the event</p>
-          <ul>
-            <li><a href="#">London</a></li>
-            <li><a href="#">Brighton</a></li>
-            <li><a href="#">Oxford</a></li>
-          </ul>
-        </section>
+      <section class="col-md-4">
+        <h3>This month's gigs</h3>
+        <p>See us performing live in one of our upcoming gigs. Some venues requires you to book the event</p>
+        <ul>
+          <li><a href="#">The Hollywood, Milan</a></li>
+          <li><a href="#">Magazzini Generali, Milan</a></li>
+          <li><a href="#">The Hennesy, Turin</a></li>
+        </ul>
+      </section>
 
-        <section class="social_links col-md-2">
-          <h3>Follow us</h3>
-          <ul>
-            <li><a href="http://www.facebook.com" target="_blank" ><img src="images/facebook.png" alt="facebook"></a></li>
-            <li><a href="http://www.twitter.com" target="_blank" ><img src="images/twitter.png" alt="twitter"></a></li>
-            <li><a class="navbar-button btn-info btn pull-right" href="https://www.apple.com/itunes/charts/songs/" target="_blank" >Download from itunes</a></li>
-          </ul>
-        </section>
+      <section class="social-links col-md-2">
+        <h3>Follow us</h3>
+        <ul>
+          <li><a href="#" target="_blank"><i class="fa fa-facebook"></i></a></li>
+          <li><a href="#" target="_blank"><i class="fa fa-twitter"></i></a></li>
+          <li><a href="#" target="_blank"><i class="fa fa-instagram"></i></a></li>
+          <li><a class="navbar-button btn-info btn pull-right" href="https://www.apple.com/itunes/charts/songs/" target="_blank"><i class="fa fa-apple fa-4"></i><span>Download<br/>on iTunes</span></a></li>
+        </ul>
+      </section>
     </div>
   </footer>
-<!-- END: footer -->
 
-  </body>
+</body>
 </html>

@@ -1,37 +1,63 @@
-/* JQuery */
-$(document).ready (function() {
-	$('.hero-content h3').click(function() {
-		subText = $(this).text();
-		$(this).text(subText + " * ");
-	});
+/* JQuery effects */
 
-	$('.selling-points .point h5').click(function() {
-		$(this).css({'font-size' : '24pt', 'text-transform' : 'uppercase'});
-	});
+var newContent = function() {
+	var template =
+		'	<div class="container">'
+	+	'		<h1><span>Stay tuned…</span><br />'
+	+	'			new events<br />'
+	+	'			coming this<br />'
+	+	'			winter'
+	+	' 	</h1>'
+	+	'	</div>'
+	;
+	return $(template);
+};
 
+/* Update hero content */
+var showNewHeroContent = function() {
 	$('.hero-content').click(function () {
+		$(this).empty();
+		$(this).append(newContent());
 		$(this).fadeIn('slow', function() {
-			$(this).css({'background' : 'url(/images/band_hero2.jpg)', 'background-position' : '50% 10%', 'background-size' : 'cover'});
+			$(this).css({'background' : 'url(images/band2.jpg) no-repeat', 'background-size' : 'cover'});
+			console.log('Added new Hero content');
 		});
 	});
+};
 
-	var onHoverShiftRight = function() {
-		$(this).animate({'margin-left' : '100px'});
+/* Overlay function */
+var buildOverlay = function(pageURL) {
+	var template =
+		'	<div class="feature-box-overlay">'
+	+	'		<div class="feature-box-overlay-content">'
+	+	'			<a class="feature-box-overlay-button" href="' + pageURL + '">'
+	+	'				<i class="fa fa-plus"></i>'
+	+	'			</a>'
+	+	'		</div>'
+	+	'	</div>'
+	;
+	return $(template);
+};
+
+
+var applyOverlay = function () {
+	$features = $('.feature-box');
+
+	var onHover = function(event) {
+		$(this).append(buildOverlay('/album.html'));
+	};
+	var offHover = function(event) {
+		$(this).find('.feature-box-overlay').remove();
 	};
 
-	var offHoverShiftLeft = function() {
-		$(this).animate({'margin-left' : '0'})
-	};
+	$features.hover(onHover, offHover);
+	console.log('Applying hover on feature images')
+};
 
-	var onHoverTurnYellow = function() {
-		$(this).css({'color' : 'yellow'});
-	};
 
-	var offHoverTurnOrange = function() {
-		$(this).css({'color' : '#EB7F00'});
-	}
-
-	$('.navbar .navbar-header img').hover(onHoverShiftRight, offHoverShiftLeft);
-	$('.hero-content h1').hover(onHoverTurnYellow, offHoverTurnOrange);
-});
-
+if (document.URL.match(/\/index.html/)) {
+	$(document).ready(function() {
+		showNewHeroContent();
+		applyOverlay();
+	});
+}

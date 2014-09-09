@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset = 'utf-8'>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Album Playlist</title>
  <!-- Google fonts -->
 	<link href="http://fonts.googleapis.com/css?family=Open+Sans:400,800,600,700,300" rel="stylesheet" type="text/css">
@@ -10,6 +11,7 @@
 <!-- Stylesheets -->
 	<link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.17.1/build/cssreset/cssreset-min.css">
 	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css">
 	<link rel="stylesheet" type="text/css" href="/stylesheets/app.css">
 
 <!--  Javascript -->
@@ -22,21 +24,21 @@
 
 <body class="player">
 
-<!-- Nav bar -->
-<nav class="player-header-nav navbar">
-	<div class="container">
-		<div class="navbar-header">
-			<a class="logo navbar-left" href="/index.html"><img src="/images/blocjams.png"></a>
-		</div>
-		<div class="nav-links">
-			<ul>
-				<li><a href="/index.html">Home</a></li>
-				<li><a href="/albums.html">Album</a></li>
-				<li><a href="/collection.html">Collection</a></li>
-			</ul>
-		</div>
-	</div>
-</nav>
+<!-- Navbar -->
+  <nav class="player-header-nav navbar">
+    <div class="container">
+        <div class="navbar-header">
+          <a class="logo navbar-left" href="index.html"><img src="images/djfunk_logo.png"></a>
+        </div>
+        <div class="navbar-left nav-links">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="album.html">Album</a></li>
+            <li><a href="collection.html">Collection</a></li>
+          </ul>
+        </div>
+      </div>
+  </nav>
 
 <div class="album-container container">
 <!--  Album container -->
@@ -62,34 +64,35 @@
 </div>
 
 <!-- Footer -->
-	<footer class="navbar navbar-fixed-bottom">
-		<div class="container">
-			<section class="col-md-6">
-          <h3>About us</h3>
-          <p>Bloc Jams are an English indie rock band formed in 2012 in Croydon, a suburb of London. Some of the band's well-known albums are: Whatever People Say I Am, That's What I'm Not and Favourite Worst Nightmare.</p>
-          <p>©2014 Copyright Bloc Jams</p>
-        </section>
+  <footer class="navbar">
+    <div class="container">
+      <section class="col-md-6">
+        <h3>About our concerts</h3>
+        <p>We're synonymous with rock music concerts in Northern Italy and Switzerland. Our summer rock concerts have become landmark events on the national music scene. Some of the band's well-known albums are: Whatever People Say I Am, That's What I'm Not and Favourite Worst Nightmare.</p>
+        <p class="copyright">&copy; 2014 | DjFunk</p>
+      </section>
 
-        <section class="col-md-4">
-          <h3>This month's gigs</h3>
-          <p>See us performing live in one of our upcoming gigs. Some venues requires you to book the event</p>
-          <ul>
-            <li><a href="#">London</a></li>
-            <li><a href="#">Brighton</a></li>
-            <li><a href="#">Oxford</a></li>
-          </ul>
-        </section>
+      <section class="col-md-4">
+        <h3>This month's gigs</h3>
+        <p>See us performing live in one of our upcoming gigs. Some venues requires you to book the event</p>
+        <ul>
+          <li><a href="#">The Hollywood, Milan</a></li>
+          <li><a href="#">Magazzini Generali, Milan</a></li>
+          <li><a href="#">The Hennesy, Turin</a></li>
+        </ul>
+      </section>
 
-        <section class="social_links col-md-2">
-          <h3>Follow us</h3>
-          <ul>
-            <li><a href="http://www.facebook.com" target="_blank" ><img src="images/facebook.png" alt="facebook"></a></li>
-            <li><a href="http://www.twitter.com" target="_blank" ><img src="images/twitter.png" alt="twitter"></a></li>
-            <li><a class="navbar-button btn-info btn pull-right" href="https://www.apple.com/itunes/charts/songs/" target="_blank" >Download from itunes</a></li>
-          </ul>
-        </section>
-		</div>
-	</footer>
+      <section class="social-links col-md-2">
+        <h3>Follow us</h3>
+        <ul>
+          <li><a href="#" target="_blank"><i class="fa fa-facebook"></i></a></li>
+          <li><a href="#" target="_blank"><i class="fa fa-twitter"></i></a></li>
+          <li><a href="#" target="_blank"><i class="fa fa-instagram"></i></a></li>
+          <li><a class="navbar-button btn-info btn pull-right" href="https://www.apple.com/itunes/charts/songs/" target="_blank"><i class="fa fa-apple fa-4"></i><span>Download<br/>on iTunes</span></a></li>
+        </ul>
+      </section>
+    </div>
+  </footer>
 <!-- END: footer -->
 </body>
 </html>

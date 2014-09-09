@@ -4,7 +4,7 @@ html {
 
 body {
 	font-family: 'Open Sans', Helvetica, sans-serif;
-	color: #F3FFE2;
+	color: #EFF1C2;
 	min-height: 100%;
 	line-height: 1.4em;
 	background: -webkit-linear-gradient(top, rgb(25, 100, 176) 50%, rgb(72, 236, 230) 100%);
@@ -15,73 +15,111 @@ body {
 
 body.landing {
 	margin-bottom: 0;
-	background: #4192D9;
+	background: #2E313D;
 }
+
+/* =================
+    navbar styles
+===================*/
 
 .navbar {
 	margin-bottom: 0;
 }
 
+.nav-links {
+	margin-left: 20px;
+}
+
 .nav-links ul {
-	float: right;
+	margin-top: 24px;
 }
 
 .nav-links ul li {
 	float: left;
-	padding: 30px 20px 0 0;
-}
-
-.nav-links ul li:last-child {
-	padding-right: 0;
 }
 
 .nav-links ul li a {
-	text-decoration: none;
+	font-family: 'Anton', Helvetica, sans-serif;
+	font-size: 18px;
+	color: #EFF1C2;
+	text-transform: uppercase;
+	padding: 5px 10px;
+	margin: 0 5px;
 }
 
 .nav-links ul li a:hover {
-	color: #EB7F00;
-	border-bottom: 3px solid #EB7F00;
+	color: #F0563D;
+	background: #EFF1C2;
+	text-decoration: none;
 }
 
-.player-header-nav{
+.player-header-nav {
 	width: 100%;
-	background: rgba(0, 48, 90, .9);
-	height: 90px;
-	padding: 5px 0;
+	height: 80px;
+	background: rgba(0, 0, 0, 0.4);
+	padding: 15px 0;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 10;
 }
 
-.clear {
-	clear: both;
-}
 
 
-/* Hero Styles */
+/* =================
+    Hero styles
+===================*/
 
 .hero-content {
 	width: 100%;
-	background: url(../images/band_hero.jpg) no-repeat 50% 10%;
+	background: url(../images/band1.jpg) no-repeat;
 	background-size: cover;
+	padding: 40px 0;
+	height: 600px;
+}
+
+.hero-content h1{
+	font-family: 'Anton', Helvetica, sans-serif;
+	font-size: 110px;
+	color: #B7C11E;
+	line-height: 1em;
+}
+
+.hero-content h1 span {
+	font-size: 52px;
+	color: #EFF1C2;
+	line-height: 1em;
+}
+
+/* Standfirst styles */
+.standfirst-content {
+	width: 100%;
 	padding: 80px 0;
-	height: 400px;
+	background: #EFF1C2;
+	text-align: center;
 }
 
-.hero-content h1 {
+.standfirst-content h2 {
 	font-family: 'Roboto Slab', Helvetica, sans-serif;
-	font-size: 4.8em;
-	font-weight: 700;
-	color: #EB7F00;
-	margin-bottom: -12px;
+	font-size: 52px;
+	color: #F0563D;
+	margin: 0 0 10px;
+	font-weight: 600;
 }
 
-.hero-content h3 {
-	font-size: 1.2em;
-	width: 320px;
-	line-height: 1.5em;
+.standfirst-content p {
+	font-size: 14px;
+	color: #2E313D;
+	padding: 0 100px;
+	font-weight: 600;
 }
 
 
-/* Album view styles*/
+
+
+/* ====================
+   Album view styles
+======================*/
 
 .album-container {
 	margin-bottom: 230px; /* makes container scrollable from behind footer */
@@ -126,10 +164,48 @@ body.landing {
 	border-top: 1px solid rgba(255, 255, 255, .4);
 }
 
+/* Album controls overlay */
+
+.album-song-button {
+	text-align: center;
+	font-size: 14px;
+	background: #FFF;
+	color: #D2287B;
+	border-radius: 50% 50%;
+	display: inline-block;
+	width: 28px;
+	height: 28px;
+}
+
+.album-song-button:hover {
+	cursor: pointer;
+	color: #FFF;
+	background: #D2287B;
+}
+
+.album-song-button i {
+	line-height: 28px;
+}
+
+.album-song-button .fa-play {
+	padding-left: 5px;
+}
+
+.album-song-listing td {
+	vertical-align: center;
+}
+
+td.song-number {
+	padding: 0;
+	height: 70px;
+	text-align: center;
+}
+
+
 
 /* Selling points Styles */
 
-.selling-points {
+/*.selling-points {
 	padding: 80px 0;
 	background: #4192D9;
 	margin-bottom: 230px;
@@ -156,10 +232,14 @@ body.landing {
 
 .selling-points .point p {
 	font-size: 1em;
-}
+}*/
 
 
-/* Collection view styles */
+
+
+/* ====================
+     Collection styles
+======================*/
 
 .table.album-song-listing td{
 	/*Overrides default booststrap style: table*/
@@ -197,6 +277,9 @@ body.landing {
 .collection-album-container .collection-album-image-container {
 	position: relative;
 }
+
+
+/* Collection view-ovelray*/
 
 .collection-album-container .collection-album-image-overlay {
 	position: absolute;
@@ -239,53 +322,213 @@ body.landing {
 	padding-left: 5px;
 }
 
- /*Footer*/
 
-footer {
+
+/* ====================
+     Features styles
+======================*/
+
+.features-container {
 	width: 100%;
-	height: 230px;
-	background: #00305A;
-	padding: 20px 0;
+	min-height: 400px;
+	padding: 100px 0;
+	background: #2E313D;
 }
 
-footer section {
+.features-container .feature {
+	/*width: 32%;*/
 	float: left;
-	padding-right: 40px;
+	text-align: center;
+}
+
+.features-container .feature .feature-box {
+	width: 350px;
+	height: 90px;
+	margin-bottom: 10px;
+	background: #FFF;
+	overflow: hidden;
+}
+
+.features-container .feature .feature-box img {
+	width: 100%;
+	position: relative;
+	bottom: 20%;
+}
+
+.features-container .feature h3 {
+	font-family: 'Roboto Slab', Helvetica, sans-serif;
+	font-size: 28px;
+	color: #F0563D;
+}
+
+.features-contianer .feature p {
+	font-size: 14px;
+	font-weight: 600;
+}
+
+/* Feature overlay  */
+
+.feature-box-overlay {
+	position: absolute;
+	top: 0;
+	left: 15px;
+	right: 0;
+	width: 350px;
+	height: 90px;
+	background: rgba(0, 0, 0, 0.4);
+	z-index: 9;
+}
+
+.feature-box-overlay-content {
+	position: absolute;
+	bottom: 15%;
+	width: 100%;
+	text-align: center;
+}
+
+.feature-box-overlay-button {
+	font-size: 36px;
+	background: rgba(256, 256, 256, 0.6);
+	color: #F0563D;
+	border-radius: 50% 50%;
+	display: inline-block;
+	width: 50px;
+	height: 50px;
+}
+
+.feature-box-overlay-button i {
+	line-height: 52px;
+}
+
+.feature-box-overlay-button:hover {
+	cursor: pointer;
+}
+
+
+/* ====================
+    Benefits style
+======================*/
+
+.benefits-container {
+	width: 100%;
+	padding: 80px 0;
+	background: url(../images/collection-backdrop.jpg) no-repeat;
+	background-size: cover;
+}
+
+.benefit-hero {
+	padding-top: 180px;
+}
+
+.benefit-header {
+	padding-top: 10px;
+}
+
+.benefit-header h2{
+	font-family: 'Anton', Helvetica, sans-serif;
+	font-size: 52px;
+	color: #B7C11E;
+	margin-bottom: 40px;
+}
+
+.benefit  {
+	height: 130px;
+	margin: 10px 0;
+	border-bottom: 1px solid rgba(239, 241, 194, 0.3);
+}
+
+
+.benefit h3 {
+	font-family: 'Roboto Slab', Helvetica, sans-serif;
+	font-size: 28px;
+	color: #F0563D;
+	margin-top: 0;
+}
+
+.benefit p {
+	font-size: 14px;
+	font-weight: 400;
+}
+
+
+
+
+ /* =================
+    Footer styles
+===================*/
+footer {
+	width: 100%;
+	height: 320px;
+	background: #F0563D;
+	padding: 80px;
 }
 
 footer h3 {
 	font-family: 'Roboto Slab', Helvetica, sans-serif;
-	font-size: 1.4em;
-	font-weight: 600;
-	color: #EB7F00;
+	font-size: 16px;
+	font-weight: 300;
+	color: #EFF1C2;
 	margin-bottom: 10px;
 }
 
 footer p {
-	font-size: 0.8em;
-	font-weight: 300;
+	font-size: 12px;
+	font-weight: 400;
+	color: #2E313D;
+}
+
+footer p.copyright {
+	font-family: 'Roboto Slab', Helvetica, sans-serif;
+	font-size: 12px;
+	color: #EFF1C2;
+}
+
+footer ul li {
+	line-height: 1.3em;
 }
 
 footer section ul li a {
-	font-size: 0.8em;
+	font-size: 10px;
 	text-decoration: none;
-	color: #EB7F00;
+	color: #EFF1C2;
 }
 
 footer section ul li a:hover {
-	color: #EB7F00;
-	border-bottom: 1px solid #EB7F00;
+	color: #EFF1C2;
+	border-bottom: 1px solid #EFF1C2;
 }
 
-footer .social_links ul {
-	list-style: none;
-}
-
-footer .social_links ul li {
+footer .social-links ul li {
 	float: left;
-	padding: 0 10px 10px 0;
+	margin: 0 15px 10px 0;
+	padding: 0;
 }
 
-footer .social_links ul li a:hover {
+footer .social-links ul li a:hover {
 	border: none;
+}
+
+footer .social-links ul li a i {
+	font-size: 32px;
+	color: #EFF1C2;
+}
+
+footer .social-links ul li a i:hover {
+	color: #5BC0DE;
+	padding: 0;
+}
+
+footer .social-links ul li a.btn i {
+	font-size: 30px;
+	float: left;
+	color: #FFF;
+	margin: 2px 5px 2px 0;
+}
+
+footer .social-links ul li a.btn span {
+	font-size: 13px;
+	line-height: 1.2em;
+	vertical-align: center;
+	display: inline-block;
+	margin: 2px 5px;
 }
