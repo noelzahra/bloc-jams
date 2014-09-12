@@ -31,6 +31,8 @@ body > div.wrapper {
 body.landing > div.wrapper {
 	padding-bottom: 0;
 }
+
+
 /* =================
     navbar styles
 ===================*/
@@ -108,19 +110,21 @@ footer {
 				}
 		}
 
-		ul li {
-			line-height: 1.3em;
+		ul {
+				li {
+					line-height: 1.3em;
 
-			a {
-					font-size: 10px;
-					text-decoration: none;
-					color: #EFF1C2;
+					a {
+							font-size: 10px;
+							text-decoration: none;
+							color: #EFF1C2;
 
-					&:hover {
-						color: #EFF1C2;
-						border-bottom: 1px solid #EFF1C2;
+							&:hover {
+								color: #EFF1C2;
+								border-bottom: 1px solid #EFF1C2;
+							}
 					}
-			}
+				}
 		}
 
 		.social-links {

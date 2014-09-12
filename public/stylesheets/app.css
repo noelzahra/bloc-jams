@@ -166,7 +166,7 @@
   height: 28px; }
   .album-song-button i {
     line-height: 28px; }
-  .album-song-button .fa-play {
+  .album-song-button.fa-play {
     padding-left: 5px; }
   .album-song-button:hover {
     cursor: pointer;
@@ -175,11 +175,10 @@
 
 .album-song-listing td {
   vertical-align: center; }
-
-td.song-number {
-  padding: 0;
-  height: 70px;
-  text-align: center; }
+  .album-song-listing td.song-number {
+    padding: 0;
+    height: 70px;
+    text-align: center; }
 
 /* ====================
     Collection styles
@@ -202,8 +201,8 @@ td.song-number {
       color: rgba(255, 255, 255, 0.7); }
       .collection-album-container .caption p a {
         color: rgba(255, 255, 255, 0.6); }
-      .collection-album-container .caption p a.album-name {
-        color: white; }
+        .collection-album-container .caption p a.album-name {
+          color: white; }
   .collection-album-container .collection-album-image-container {
     position: relative; }
     .collection-album-container .collection-album-image-container .collection-album-image-overlay {
@@ -234,7 +233,7 @@ td.song-number {
             background: #d2287b; }
         .collection-album-container .collection-album-image-container .collection-album-image-overlay .collection-overlay-content i {
           line-height: 42px; }
-          .collection-album-container .collection-album-image-container .collection-album-image-overlay .collection-overlay-content i .fa-play {
+          .collection-album-container .collection-album-image-container .collection-album-image-overlay .collection-overlay-content i.fa-play {
             padding-left: 5px; }
 
 /* ====================

@@ -61,7 +61,7 @@
 			line-height: 28px;
 		}
 
-		.fa-play {
+		&.fa-play {
 			padding-left: 5px;
 		}
 
@@ -74,10 +74,10 @@
 
 .album-song-listing td {
 	vertical-align: center;
-}
 
-td.song-number {
-	padding: 0;
-	height: 70px;
-	text-align: center;
+		&.song-number {
+			padding: 0;
+			height: 70px;
+			text-align: center;
+		}
 }
