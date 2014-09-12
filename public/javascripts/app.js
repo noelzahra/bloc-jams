@@ -208,6 +208,59 @@ var changeAlbumView = function(album) {
 	}
 };
 
+
+/*  functional player controls */
+var updateSeekPercentage = function($seekBar, event) {
+	var barWidth = $seekBar.width();
+	var offsetX = event.pageX - $seekBar.offset().left; // get distance from
+																											//mouse click(event.pageX) - offset() from left most pt on seekbar
+
+	var offsetXPercent = (offsetX / $seekBar.width()) * 100; //offsetXpercent = offsetX / total width x 100% => pass it as value
+	offsetXPercent = Math.max(0, offsetXPercent);						// to css left:offsetXPercent %
+	offsetXPercent = Math.min(100, offsetXPercent);
+
+	// implement UI changes
+	var percentageString = offsetXPercent + '%';
+	$seekBar.find('.fill').width(percentageString); //fill up to percentageString
+	$seekBar.find('.thumb').css({'left' : percentageString}); // shift left to percentageString
+};
+
+
+/* moves .fill and .thumb to click event  */
+var setupSeekBars = function() {
+	$seekBars = $('.player-bar .seek-bar');
+	$seekBars.click(function(event) {
+		updateSeekPercentage($(this), event);
+	});
+
+/* musedown, mouseup events */
+	$seekBars.find('.thumb').mousedown(function(event) {
+		var $seekBar = $(this).parent();
+		$seekBar.addClass('no-animate');
+
+		$(document).bind('mousemove.thumb', function(event) {
+			updateSeekPercentage($seekBar, event);
+		});
+
+		//cleanup
+		$(document).bind('mouseup.thumb', function() {
+			$seekBar.removeClass('no-animate');
+
+			$(document).unbind('mousemove.thumb');
+			$(document).unbind('mouseup.thumb');
+		});
+	});
+};
+
+
+/*  mouse co-ordinates function */
+var mouseCoOrdinates = function() {
+	$(this).click(function(eventX, eventY) {
+		console.log('mouse co-ordinates are: x: ' + event.pageX + ' y: ' + event.pageY );
+	});
+};
+
+
  // This 'if' condition is used to prevent the jQuery modifications
  // from happening on non-Album view pages.
  //  - Use a regex to validate that the url has "/album" in its path.
@@ -215,6 +268,8 @@ var changeAlbumView = function(album) {
  if (document.URL.match(/\/album.html/)) {
  	$(document).ready(function() {
  		changeAlbumView(albumMarconi);
+ 		setupSeekBars();
+ 		mouseCoOrdinates();
  		$('.album-header-container').click(function() {
  			changeAlbumView(albumPicasso);
  		});
