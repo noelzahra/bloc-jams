@@ -72,12 +72,15 @@
 		}
 }
 
-.album-song-listing td {
-	vertical-align: center;
+.album-song-listing {
 
-		&.song-number {
-			padding: 0;
-			height: 70px;
-			text-align: center;
+		td {
+			vertical-align: center;
+
+				&.song-number {
+					padding: 0;
+					height: 70px;
+					text-align: center;
+				}
 		}
 }
