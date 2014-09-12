@@ -1,0 +1,177 @@
+/* =================
+    Hero styles
+===================*/
+
+.hero-content {
+	width: 100%;
+	background: url(../images/band1.jpg) no-repeat;
+	background-size: cover;
+	padding: 40px 0;
+	height: 600px;
+
+		h1 {
+			font-family: 'Anton', Helvetica, sans-serif;
+			font-size: 110px;
+			color: #B7C11E;
+			line-height: 1em;
+
+				span {
+					font-size: 52px;
+					color: #EFF1C2;
+					line-height: 1em;
+				}
+		}
+}
+
+
+/* Standfirst styles */
+.standfirst-content {
+	width: 100%;
+	padding: 80px 0;
+	background: #EFF1C2;
+	text-align: center;
+
+		h2 {
+			font-family: 'Roboto Slab', Helvetica, sans-serif;
+			font-size: 52px;
+			color: #F0563D;
+			margin: 0 0 10px;
+			font-weight: 600;
+			}
+
+		p {
+			font-size: 14px;
+			color: #2E313D;
+			padding: 0 100px;
+			font-weight: 600;
+			}
+}
+
+
+
+/* ====================
+     Features styles
+======================*/
+
+.features-container {
+	width: 100%;
+	min-height: 400px;
+	padding: 100px 0;
+	background: #2E313D;
+
+		.feature {
+			/*width: 32%;*/
+			float: left;
+			text-align: center;
+
+				.feature-box {
+					width: 350px;
+					height: 90px;
+					margin-bottom: 10px;
+					background: #FFF;
+					overflow: hidden;
+
+						img {
+							width: 100%;
+							position: relative;
+							bottom: 20%;
+						}
+				}
+
+				h3 {
+					font-family: 'Roboto Slab', Helvetica, sans-serif;
+					font-size: 28px;
+					color: #F0563D;
+
+				p {
+					font-size: 14px;
+					font-weight: 600;
+				}
+				}
+		}
+}
+
+
+/* Feature overlay  */
+
+.feature-box-overlay {
+	position: absolute;
+	top: 0;
+	left: 15px;
+	right: 0;
+	width: 350px;
+	height: 90px;
+	background: rgba(0, 0, 0, 0.4);
+	z-index: 9;
+
+		.feature-box-overlay-content {
+			position: absolute;
+			bottom: 15%;
+			width: 100%;
+			text-align: center;
+
+				.feature-box-overlay-button {
+					font-size: 36px;
+					background: rgba(255, 255, 255, 0.6);
+					color: #F0563D;
+					border-radius: 50% 50%;
+					display: inline-block;
+					width: 50px;
+					height: 50px;
+
+						i {
+							line-height: 52px;
+						}
+
+						&:hover {
+							cursor: pointer;
+						}
+
+				}
+		}
+}
+
+
+/* ====================
+    Benefits style
+======================*/
+
+.benefits-container {
+	width: 100%;
+	padding: 80px 0;
+	background: url(../images/collection-backdrop.jpg) no-repeat;
+	background-size: cover;
+
+	.benefit-hero {
+		padding-top: 180px;
+	}
+
+	.benefit-header {
+		padding-top: 10px;
+
+			h2 {
+				font-family: 'Anton', Helvetica, sans-serif;
+				font-size: 52px;
+				color: #B7C11E;
+				margin-bottom: 40px;
+			}
+	}
+
+	.benefit {
+		height: 130px;
+		margin: 10px 0;
+		border-bottom: 1px solid rgba(239, 241, 194, 0.3);
+
+		h3 {
+			font-family: 'Roboto Slab', Helvetica, sans-serif;
+			font-size: 28px;
+			color: #F0563D;
+			margin-top: 0;
+		}
+
+		p {
+			font-size: 14px;
+			font-weight: 400;
+		}
+	}
+}

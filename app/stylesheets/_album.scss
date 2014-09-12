@@ -1,0 +1,83 @@
+/* ====================
+   Album view styles
+======================*/
+
+.album-container {
+	margin-bottom: 230px; /* makes container scrollable from behind footer */
+
+	.album-header-container {
+		margin-top: 55px;
+		margin-bottom: 40px;
+	}
+
+	.album-header-information {
+		margin-top: 45px;
+		margin-bottom: 20px;
+
+			h3, h4, h5 {
+				font-family: 'Roboto Sans', Helvetica, sans-serif;
+				line-height: 1.4em;
+			}
+			h3 {
+				font-size: 4em;
+				font-weight: 300;
+			h4 {
+				font-size: 2em;
+				font-weight: 300;
+			h5 {
+				font-size: 1.8em;
+				font-weight: 300;
+			}
+			}
+			}
+	}
+}
+
+
+
+.table.album-song-listing {
+	font-weight: 300;
+
+		td {
+			padding: 20px;
+			border-top: 1px solid rgba(255, 255, 255, .4);
+		}
+}
+
+
+/* Album controls overlay */
+
+.album-song-button {
+	text-align: center;
+	font-size: 14px;
+	background: #FFF;
+	color: #D2287B;
+	border-radius: 50% 50%;
+	display: inline-block;
+	width: 28px;
+	height: 28px;
+
+		i {
+			line-height: 28px;
+		}
+
+		.fa-play {
+			padding-left: 5px;
+		}
+
+		&:hover {
+			cursor: pointer;
+			color: #FFF;
+			background: #D2287B;
+		}
+}
+
+.album-song-listing td {
+	vertical-align: center;
+}
+
+td.song-number {
+	padding: 0;
+	height: 70px;
+	text-align: center;
+}
