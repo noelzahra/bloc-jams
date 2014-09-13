@@ -348,6 +348,90 @@
     margin-top: -10px;
     margin-left: -10px; }
 
+/* Profile SCSS  */
+.user-account .user-profile-header {
+  border: none;
+  font-size: 24px;
+  font-weight: 300;
+  margin-top: 20px; }
+.user-account .user-portrait {
+  margin-left: 0;
+  text-align: center;
+  display: inline-block; }
+  .user-account .user-portrait .user-image-container {
+    margin-bottom: 20px; }
+
+.user-subscription .credit-card-section {
+  margin-top: 30px; }
+  .user-subscription .credit-card-section .subsection-label {
+    margin: 20px 0;
+    font-size: 24px;
+    color: white;
+    font-weight: 300;
+    text-transform: capitalize; }
+  .user-subscription .credit-card-section .table.credit-card-list td {
+    border-top-color: rgba(255, 255, 255, 0.6);
+    font-weight: 400;
+    font-size: 16px; }
+    .user-subscription .credit-card-section .table.credit-card-list td i {
+      color: #649b1d; }
+
+.user-profile-tabs-container {
+  margin: 100px auto 20px;
+  text-align: center; }
+  .user-profile-tabs-container .pagination.profile-pagination {
+    font-weight: 600;
+    border: #649b1d 2px solid;
+    border-radius: 8px; }
+    .user-profile-tabs-container .pagination.profile-pagination > li > a {
+      border: none;
+      background: transparent;
+      color: white;
+      letter-spacing: 1px; }
+    .user-profile-tabs-container .pagination.profile-pagination > .active > a {
+      background: #649b1d;
+      border-radius: 4px; }
+
+/* Styles below not used anywhere */
+.default-form label {
+  font-weight: 300;
+  font-size: 16px; }
+.default-form input {
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 0;
+  border: none;
+  font-weight: 300;
+  font-size: 16px;
+  padding: 10px 12px; }
+
+.no-left-gutter {
+  padding-left: 0px; }
+
+.no-right gutter {
+  padding-right: 0px; }
+
+/* Button SCSS  */
+.default-button {
+  background: #649b1d;
+  color: white;
+  font-weight: 600;
+  border-radius: 5px;
+  border: none;
+  padding: 10px 20px;
+  font-size: 14px;
+  letter-spacing: 1px;
+  outline: none; }
+  .default-button:hover {
+    background: #487015;
+    outline: none;
+    cursor: pointer; }
+  .default-button:active {
+    background: #71b021;
+    outline: none; }
+  .default-button:disabled {
+    background: #b3b3b3;
+    cursor: not-allowed; }
+
 html {
   height: 100%; }
 

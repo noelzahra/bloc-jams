@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Profile</title>
+	<!-- Google fonts -->
+	<link href='http://fonts.googleapis.com/css?family=Roboto+Slab:400,700' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,800,600,300' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Anton' rel='stylesheet' type='text/css'>
+
+	<!-- Stylesheets -->
+	<link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.17.2/build/cssreset/cssreset-min.css">
+	<link rel="stylesheet" type="text/css" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="/stylesheets/app.css">
+
+	<!-- Javascript -->
+	<script src="/socket.io/socket.io.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+	<script src="/javascripts/vendor.js"></script>
+	<script src="/javascripts/app.js"></script>
+	<script>
+		require('scripts/app');
+	</script>
+</head>
+
+<body>
+	<div class="wrapper">
+<!-- navbar -->
+	<nav class="player-header-nav navbar">
+		<div class="container">
+			<div class="navbar-header">
+				<a class="logo navbar=left" href="index.html"><img src="images/djfunk_logo.png"></a>
+			</div>
+			<div class="navbar-left nav-links">
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="album.html">Album</a></li>
+					<li><a href="collection.html">Collection</a></li>
+					<li><a href="profile.html">Profile</a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+
+
+<!-- Bootstrap Pagination -->
+	<div class="container">
+		<div>
+
+			<div class="user-profile-tabs-container">
+				<ul class="profile-pagination pagination tabs">
+					<li class="tab">
+						<a href="#yourAccountTab">Your Account</a>
+					</li>
+					<li class="tab">
+						<a href="#subscriptionTab">Subscription</a>
+					</li>
+				</ul>
+			</div>
+
+<!-- User profile -->
+			<div class="user-account tab-pane" id="yourAccountTab">
+				<div class="page-header user-profile-header">Personal Information</div>
+				<div class="row">
+					<div class="col-md-3">
+						<div class="user-portrait">
+							<div class="user-image-container"><img src="/images/user-upload-placeholder.png"></div>
+							<button class="default-button center-block">Upload</button>
+						</div>
+					</div>
+
+					<div class="col-md-7">
+
+						<form role="form" class="default-form">
+							<div class="form-group col-md-12">
+								<label for="name">Name</label>
+								<input name="email" type="text" class="form-control" />
+							</div>
+
+							<div class="form-group col-md-12">
+								<label for="email">Email</label>
+								<input name="email" type="email" class="form-control" />
+							</div>
+
+							<div class="form-group col-md-6">
+								<label for="city">City</label>
+								<input name="city" type="text" class="form-control" />
+							</div>
+
+							<div class="form-group col-md-6">
+								<label for="state">Sate</label>
+								<input name="state" type="text" class="form-control">
+							</div>
+
+							<div class="form-group col-md-12">
+								<label for="coutnry">Country</label>
+								<input name="country" type="text" class="form-control">
+							</div>
+							<button class="default-button center-block">Save Profile</button>
+						</form>
+						<div style="padding: 20px" class="div"></div>
+
+						<form role="form" class="default-form">
+							<div class="col-md-12 form-group">
+								<label for="password">Password</label>
+								<input name="pasword" type="password" class="form-control">
+							</div>
+
+							<div class="col-md-12 form-group">
+									<label for="password">Password Confirmation</label>
+									<input name="paswword" type="pawwsord" class="form-control">
+							</div>
+							<button class="default-button center-block">Change Password</button>
+						</form>
+
+					</div>
+
+				</div>
+			</div> <!-- END: .user-account  -->
+
+<!--  Subscripiton -->
+			<div class="user-subscription tab-pane" id="subscriptionTab">
+				<div class="row text-center">
+					<img src="/images/subscription-placeholder.png"><img src="/images/subscription-placeholder.png"><img src="/images/subscription-placeholder.png">
+				</div>
+				<div class="row">
+					<div class="col-sm-6 col-sm-push-3 credit-card-section">
+						<h3 class="subsection-label col-sm-12">Credit card</h3>
+						<div class="col-sm-12">
+							<table class="table credit-card-list">
+								<tr>
+									<td class="col-sm-2">VISA</td>
+									<td class="col-sm-9">XXXX-4563</td>
+									<td class="col-sm-1"><i class="fa fa-minus-circle"></i></td>
+								</tr>
+								<tr>
+									<td class="col-sm-2">VISA</td>
+									<td class="col-sm-9">XXXX-6534</td>
+									<td clas="col-sm-1"><i class="fa fa-minus-circle"></i></td>
+								</tr>
+							</table>
+							<button class="default-button center-block">Add Card</button>
+						</div>
+					</div>
+				</div>
+			</div> <!-- END: user-subscription -->
+
+	</div>
+</div>
+
+<!-- END: .wrapper -->
+</div>
+
+<!-- Footer -->
+	<footer class="navbar">
+		<div class="container">
+			<section class="col-md-6">
+				<h3>About our concerts</h3>
+				<p>We're synonymous with rock music concerts in Northern Italy and Switzerland. Our summer rock concerts have become landmark events on the national music scene. Some of the band's well-known albums are: Whatever People Say I Am, That's What I'm Not and Favourite Worst Nightmare.</p>
+				<p class="copyright">&copy; 2014 | djfunk</p>
+			</section>
+
+			<section class="col-md-4">
+				<h3>This month's gigs</h3>
+        <p>See us performing live in one of our upcoming gigs. Some venues requires you to book the event</p>
+        <ul>
+          <li><a href="#">The Hollywood, Milan</a></li>
+          <li><a href="#">Magazzini Generali, Milan</a></li>
+          <li><a href="#">The Hennesy, Turin</a></li>
+        </ul>
+			</section>
+
+			<section class="col-md-2 social-links">
+				<h3>Follow us</h3>
+				<ul>
+					<li><a href="#" target="_blank"><i class="fa fa-facebook"></i></a></li>
+					<li><a href="#" target="_blank"><i class="fa fa-twitter"></i></a></li>
+					<li><a href="#" target="_blank"><i class="fa fa-instagram"></i></a></li>
+					<li><a class="btn navbar-btn btn-info pull-right" href="https://www.apple.com/itunes/charts/songs/"><i class="fa fa-apple"></i><span>Download<br />on iTunes</span></a></li>
+				</ul>
+			</section>
+		</div>
+	</footer>
+
+</body>
+</html>

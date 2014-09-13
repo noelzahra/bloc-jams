@@ -1,0 +1,29 @@
+/* Button SCSS  */
+
+.default-button {
+	background: #649b1d;
+	color: #FFF;
+	font-weight: 600;
+	border-radius: 5px;
+	border: none;
+	padding: 10px 20px;
+	font-size: 14px;
+	letter-spacing: 1px;
+	outline: none;
+
+	&:hover {
+		background: #487015;
+		outline: none;
+		cursor: pointer;
+	}
+
+	&:active {
+		background: #71b021;
+		outline: none;
+	}
+
+	&:disabled {
+		background: #B3B3B3;
+		cursor: not-allowed;
+	}
+}
