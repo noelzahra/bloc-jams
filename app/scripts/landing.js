@@ -1,4 +1,4 @@
-/* JQuery effects */
+/* jQuery for landing page */
 
 var newContent = function() {
 	var template =

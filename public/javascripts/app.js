@@ -215,9 +215,9 @@ var updateSeekPercentage = function($seekBar, event) {
 	var offsetX = event.pageX - $seekBar.offset().left; // get distance from
 																											//mouse click(event.pageX) - offset() from left most pt on seekbar
 
-	var offsetXPercent = (offsetX / $seekBar.width()) * 100; //offsetXpercent = offsetX / total width x 100% => pass it as value
-	offsetXPercent = Math.max(0, offsetXPercent);						// to css left:offsetXPercent %
-	offsetXPercent = Math.min(100, offsetXPercent);
+	var offsetXPercent = (offsetX / $seekBar.width()) * 100; //offsetXpercent = offsetX / total width x 100% => pass it as value to css left:offsetXPercent %
+	offsetXPercent = Math.max(0, offsetXPercent);	// takes value > 0
+	offsetXPercent = Math.min(100, offsetXPercent); //takes value < 100
 
 	// implement UI changes
 	var percentageString = offsetXPercent + '%';
@@ -230,7 +230,7 @@ var updateSeekPercentage = function($seekBar, event) {
 var setupSeekBars = function() {
 	$seekBars = $('.player-bar .seek-bar');
 	$seekBars.click(function(event) {
-		updateSeekPercentage($(this), event);
+		updateSeekPercentage($(this), event); //returning $seekBar
 	});
 
 /* musedown, mouseup events */
@@ -287,7 +287,7 @@ require('./profile');
 });
 
 ;require.register("scripts/collection", function(exports, require, module) {
-/*Jquery*/
+/* jQuery fior collection view */
 
 var buildAlbumThumbnail = function() {
 	var template =
@@ -361,7 +361,7 @@ if (document.URL.match(/\/collection.html/)) {
 });
 
 ;require.register("scripts/landing", function(exports, require, module) {
-/* JQuery effects */
+/* jQuery for landing page */
 
 var newContent = function() {
 	var template =
@@ -432,16 +432,16 @@ if (document.URL.match(/\/index.html/)) {
 var tabsContainer = ".user-profile-tabs-container";
 
 var selectTabHandler = function(event) {
-	$tab = $(this);
+	$tab = $(this); //anchor (a href)
 	$(tabsContainer + " li").removeClass('active');
-	$tab.parent().addClass('active');
+	$tab.parent().addClass('active'); //parent is li
 
 	var selectedTabName = $tab.attr('href');
 	console.log(selectedTabName);
 
-	$(".tab-pane").addClass('hidden'); //bootstrap class => display: none;
-	$(selectedTabName).removeClass('hidden');
-	event.preventDefault();
+	$(".tab-pane").addClass('hidden'); //bootstrap class => display: none; we're hiding both tab-panes
+	$(selectedTabName).removeClass('hidden'); // remove .hidden class only from selectedTabName =>
+	event.preventDefault(); //prevents default behaviour
 };
 
 if (document.URL.match(/\/profile.html/)) {

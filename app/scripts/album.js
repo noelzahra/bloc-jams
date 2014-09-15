@@ -122,9 +122,9 @@ var updateSeekPercentage = function($seekBar, event) {
 	var offsetX = event.pageX - $seekBar.offset().left; // get distance from
 																											//mouse click(event.pageX) - offset() from left most pt on seekbar
 
-	var offsetXPercent = (offsetX / $seekBar.width()) * 100; //offsetXpercent = offsetX / total width x 100% => pass it as value
-	offsetXPercent = Math.max(0, offsetXPercent);						// to css left:offsetXPercent %
-	offsetXPercent = Math.min(100, offsetXPercent);
+	var offsetXPercent = (offsetX / $seekBar.width()) * 100; //offsetXpercent = offsetX / total width x 100% => pass it as value to css left:offsetXPercent %
+	offsetXPercent = Math.max(0, offsetXPercent);	// takes value > 0
+	offsetXPercent = Math.min(100, offsetXPercent); //takes value < 100
 
 	// implement UI changes
 	var percentageString = offsetXPercent + '%';
@@ -137,7 +137,7 @@ var updateSeekPercentage = function($seekBar, event) {
 var setupSeekBars = function() {
 	$seekBars = $('.player-bar .seek-bar');
 	$seekBars.click(function(event) {
-		updateSeekPercentage($(this), event);
+		updateSeekPercentage($(this), event); //returning $seekBar
 	});
 
 /* musedown, mouseup events */

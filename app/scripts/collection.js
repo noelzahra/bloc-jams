@@ -1,4 +1,4 @@
-/*Jquery*/
+/* jQuery fior collection view */
 
 var buildAlbumThumbnail = function() {
 	var template =

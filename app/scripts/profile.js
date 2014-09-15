@@ -3,16 +3,16 @@
 var tabsContainer = ".user-profile-tabs-container";
 
 var selectTabHandler = function(event) {
-	$tab = $(this);
+	$tab = $(this); //anchor (a href)
 	$(tabsContainer + " li").removeClass('active');
-	$tab.parent().addClass('active');
+	$tab.parent().addClass('active'); //parent is li
 
 	var selectedTabName = $tab.attr('href');
 	console.log(selectedTabName);
 
-	$(".tab-pane").addClass('hidden'); //bootstrap class => display: none;
-	$(selectedTabName).removeClass('hidden');
-	event.preventDefault();
+	$(".tab-pane").addClass('hidden'); //bootstrap class => display: none; we're hiding both tab-panes
+	$(selectedTabName).removeClass('hidden'); // remove .hidden class only from selectedTabName =>
+	event.preventDefault(); //prevents default behaviour
 };
 
 if (document.URL.match(/\/profile.html/)) {
